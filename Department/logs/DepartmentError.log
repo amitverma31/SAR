@@ -1,0 +1,28 @@
+2022-09-09 15:49:25,210 INFO  FrameworkServlet:525 - [traceId=804e7ce0658224a7, spanId=804e7ce0658224a7] Initializing Servlet 'dispatcherServlet'
+2022-09-09 15:49:25,212 TRACE DispatcherServlet:517 - [traceId=804e7ce0658224a7, spanId=804e7ce0658224a7] Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@37596b44
+2022-09-09 15:49:25,212 TRACE DispatcherServlet:541 - [traceId=804e7ce0658224a7, spanId=804e7ce0658224a7] Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@59b43e35
+2022-09-09 15:49:25,212 TRACE DispatcherServlet:566 - [traceId=804e7ce0658224a7, spanId=804e7ce0658224a7] Detected org.springframework.web.servlet.theme.FixedThemeResolver@1b9cfc19
+2022-09-09 15:49:25,212 TRACE DispatcherServlet:716 - [traceId=804e7ce0658224a7, spanId=804e7ce0658224a7] Detected DefaultRequestToViewNameTranslator
+2022-09-09 15:49:25,221 TRACE DispatcherServlet:780 - [traceId=804e7ce0658224a7, spanId=804e7ce0658224a7] Detected SessionFlashMapManager
+2022-09-09 15:49:25,221 DEBUG FrameworkServlet:542 - [traceId=804e7ce0658224a7, spanId=804e7ce0658224a7] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-09-09 15:49:25,222 INFO  FrameworkServlet:547 - [traceId=804e7ce0658224a7, spanId=804e7ce0658224a7] Completed initialization in 10 ms
+2022-09-09 15:49:25,259 TRACE LogFormatUtils:116 - [traceId=804e7ce0658224a7, spanId=804e7ce0658224a7] GET "/department", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2022-09-09 15:49:26,132 TRACE DispatcherServlet:1155 - [traceId=804e7ce0658224a7, spanId=804e7ce0658224a7] No view rendering, null ModelAndView returned.
+2022-09-09 15:49:26,140 DEBUG FrameworkServlet:1131 - [traceId=804e7ce0658224a7, spanId=804e7ce0658224a7] Completed 200 OK, headers={masked}
+2022-09-09 15:49:28,448 ERROR DiscoveryClient:907 - [] DiscoveryClient_DEPARTMENT-SERVICE/GURMBCP3412.corp.capgemini.com:DEPARTMENT-SERVICE:8081 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:893)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1457)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-09-09 15:49:31,545 TRACE LogFormatUtils:116 - [traceId=8af2477fc2516348, spanId=8af2477fc2516348] GET "/department/26", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2022-09-09 15:49:31,605 TRACE DispatcherServlet:1155 - [traceId=8af2477fc2516348, spanId=8af2477fc2516348] No view rendering, null ModelAndView returned.
+2022-09-09 15:49:31,607 DEBUG FrameworkServlet:1131 - [traceId=8af2477fc2516348, spanId=8af2477fc2516348] Completed 200 OK, headers={masked}

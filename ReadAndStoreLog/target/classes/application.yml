@@ -1,0 +1,15 @@
+server:
+  port: 8086
+
+spring:
+  applicatio:
+    name: LOG-STORE
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8085/eureka/
+  instance:
+    hostname: localhost
